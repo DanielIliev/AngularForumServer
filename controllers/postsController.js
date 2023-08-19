@@ -4,12 +4,6 @@ const postService = require('../services/postService');
 const authorizedUser = require('../middlewares/authorizationMiddleware');
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
-    res.json({
-        message: 'Hello from server'
-    });
-});
-
 // GET requests
 router.get('/posts', async (req, res) => {
     try {
