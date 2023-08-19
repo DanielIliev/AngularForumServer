@@ -1,7 +1,7 @@
 const Post = require('../models/Post.js');
 const authService = require('./authService.js');
 
-exports.fetchPosts = async () => await Post.find().lean();
+exports.fetchPosts = async () => await Post.find({}).lean();
 
 exports.fetchById = async (id) => await Post.findOne({ '_id': id }).lean();
 
