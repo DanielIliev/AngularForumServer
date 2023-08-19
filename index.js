@@ -4,11 +4,10 @@ const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
-const { DB_NAME } = require('./constants.js');
+const { DB_URI } = require('./constants.js');
 
-// TODO: Change DB name based on exam name
-mongoose.set('strictQuery', false); // For older versions
-mongoose.connect(`mongodb://127.0.0.1:27017/${DB_NAME}`);
+mongoose.set('strictQuery', false); // For older versions of mongoose
+mongoose.connect(DB_URI);
 
 app.use(cors());
 app.use(express.json());
