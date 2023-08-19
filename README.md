@@ -31,7 +31,3 @@
 ## Helper libraries
     express-validators
     jsonwebtoken
-
-## Third-party services used
-    Render as the hosting solution for the back-end
-    MongoDB Atlas as the database
