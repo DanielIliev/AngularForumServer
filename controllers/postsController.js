@@ -4,7 +4,7 @@ const postService = require('../services/postService');
 const authorizedUser = require('../middlewares/authorizationMiddleware');
 const router = require('express').Router();
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.json({
         message: 'Hello from server'
     });
